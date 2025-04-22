@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SenpaiSpot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rubik+Doodle+Shadow&display=swap');
+    
+    :root {
+        --neon-green: #00ed82;
+        --electric-pink: #ff2d75;
+        --vivid-blue: #00c8ff;
+        --sunny-yellow: #ffcc00;
+    }
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #111;
+        color: white;
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
+    
+    .hero-section {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), 
+                    url('https://i.pinimg.com/originals/95/81/40/958140889499451759e5c5a6c8c3e3a3d.jpg') no-repeat center center;
+        background-size: cover;
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-bottom: 5px solid var(--electric-pink);
+        position: relative;
+    }
+    
+    .hero-section::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        right: 0;
+        height: 20px;
+        background: linear-gradient(90deg, 
+            var(--neon-green), 
+            var(--electric-pink), 
+            var(--vivid-blue), 
+            var(--sunny-yellow));
+        z-index: 2;
+    }
+    
+    .hero-title {
+        font-size: 5rem;
+        font-weight: 700;
+        color: white;
+        text-shadow: 0 0 10px var(--electric-pink), 
+                    0 0 20px var(--vivid-blue);
+        margin-bottom: 1rem;
+        font-family: 'Rubik Doodle Shadow', cursive;
+        animation: glow 2s ease-in-out infinite alternate;
+    }
+    
+    @keyframes glow {
+        from {
+            text-shadow: 0 0 10px var(--electric-pink), 
+                        0 0 20px var(--vivid-blue);
+        }
+        to {
+            text-shadow: 0 0 15px var(--electric-pink), 
+                        0 0 30px var(--vivid-blue),
+                        0 0 40px var(--sunny-yellow);
+        }
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+    }
+    
+    .about-content {
+        background-color: rgba(20, 20, 20, 0.9);
+        padding: 3rem;
+        border-radius: 20px;
+        border: 3px solid var(--neon-green);
+        box-shadow: 0 0 30px rgba(0, 237, 130, 0.3),
+                    0 0 60px rgba(255, 45, 117, 0.2);
+        margin-top: -80px;
+        position: relative;
+        z-index: 1;
+        backdrop-filter: blur(5px);
+    }
+    
+    h2 {
+        color: var(--neon-green);
+        font-size: 2.8rem;
+        margin-bottom: 2rem;
+        text-shadow: 0 0 8px rgba(0, 237, 130, 0.7);
+        font-family: 'Rubik Doodle Shadow', cursive;
+        position: relative;
+        display: inline-block;
+    }
+    
+    h2::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, 
+            var(--neon-green), 
+            var(--electric-pink));
+        border-radius: 2px;
+    }
+    
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 1.8rem;
+        color: #eee;
+    }
+    
+    .fun-fact {
+        background-color: rgba(255, 45, 117, 0.15);
+        border-left: 5px solid var(--electric-pink);
+        padding: 1.5rem;
+        margin: 2.5rem 0;
+        font-style: italic;
+        border-radius: 0 10px 10px 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .fun-fact::before {
+        content: '✨';
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 1.5rem;
+        opacity: 0.5;
+    }
+    
+    .fun-fact::after {
+        content: '✨';
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        font-size: 1.5rem;
+        opacity: 0.5;
+    }
+    
+    ul {
+        margin-left: 2rem;
+        list-style-type: none;
+    }
+    
+    ul li {
+        margin-bottom: 1rem;
+        position: relative;
+        padding-left: 2rem;
+        font-size: 1.1rem;
+    }
+    
+    ul li::before {
+        content: '→';
+        color: var(--vivid-blue);
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+    }
+    
+    .team-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.5rem;
+        justify-content: center;
+        margin-top: 4rem;
+    }
+    
+    .team-member {
+        background: linear-gradient(145deg, #1a1a1a, #222);
+        border: 3px solid var(--neon-green);
+        border-radius: 15px;
+        padding: 2rem;
+        width: 300px;
+        text-align: center;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .team-member::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+            to bottom right,
+            rgba(0, 237, 130, 0.1),
+            rgba(0, 237, 130, 0) 70%
+        );
+        transform: rotate(30deg);
+        transition: all 0.5s ease;
+        opacity: 0;
+    }
+    
+    .team-member:hover {
+        transform: translateY(-15px) scale(1.03);
+        box-shadow: 0 15px 30px rgba(0, 237, 130, 0.3),
+                    0 10px 20px rgba(255, 45, 117, 0.2);
+        border-color: var(--electric-pink);
+    }
+    
+    .team-member:hover::before {
+        opacity: 1;
+        animation: shine 3s infinite;
+    }
+    
+    @keyframes shine {
+        0% { left: -50%; }
+        20% { left: 100%; }
+        100% { left: 100%; }
+    }
+    
+    .team-member img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid var(--neon-green);
+        margin-bottom: 1.5rem;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        transition: all 0.3s;
+    }
+    
+    .team-member:hover img {
+        border-color: var(--electric-pink);
+        transform: scale(1.05);
+    }
+    
+    .team-member h3 {
+        color: var(--vivid-blue);
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+    
+    .team-member p {
+        color: #ddd;
+        font-style: italic;
+    }
+    
+    footer {
+        background: linear-gradient(to right, #111, #222, #111);
+        color: white;
+        text-align: center;
+        padding: 3rem;
+        border-top: 5px solid var(--vivid-blue);
+        margin-top: 4rem;
+        position: relative;
+    }
+    
+    footer::before {
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: 0;
+        right: 0;
+        height: 10px;
+        background: linear-gradient(90deg, 
+            var(--neon-green), 
+            var(--electric-pink), 
+            var(--vivid-blue), 
+            var(--sunny-yellow));
+    }
+    
+    footer p {
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+    }
+    
+    footer p:first-child {
+        color: var(--sunny-yellow);
+        font-weight: 600;
+    }
+    
+    /* Floating anime elements */
+    .floating-emoji {
+        position: absolute;
+        font-size: 2rem;
+        opacity: 0.7;
+        z-index: 0;
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(10deg); }
+    }
+    
+    /* Responsive design */
+    @media (max-width: 992px) {
+        .hero-title {
+            font-size: 4rem;
+        }
+        
+        .about-content {
+            padding: 2rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .hero-title {
+            font-size: 3rem;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+        }
+        
+        .about-content {
+            margin-top: -50px;
+            padding: 1.5rem;
+        }
+        
+        .team-member {
+            width: 100%;
+            max-width: 350px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .hero-title {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+        }
+        
+        p, ul li {
+            font-size: 1rem;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Floating emoji decorations -->
+    <div class="floating-emoji" style="top: 15%; left: 5%;">🍥</div>
+    <div class="floating-emoji" style="top: 25%; right: 8%; animation-delay: 1s;">🍙</div>
+    <div class="floating-emoji" style="bottom: 30%; left: 7%; animation-delay: 2s;">🍡</div>
+    <div class="floating-emoji" style="bottom: 20%; right: 10%; animation-delay: 3s;">🍣</div>
+    
+    <section class="hero-section animate__animated animate__fadeIn">
+        <div>
+            <h1 class="hero-title">About SenpaiSpot</h1>
+            <p style="font-size: 1.8rem; color: var(--sunny-yellow); text-shadow: 0 0 10px rgba(255, 204, 0, 0.7);">
+                Where anime meets appetite! ✨
+            </p>
+        </div>
+    </section>
+    
+    <div class="container">
+        <div class="about-content animate__animated animate__fadeInUp">
+            <h2 class="animate__animated animate__fadeInLeft">Our Delicious Story</h2>
+            <p>SenpaiSpot was born when three anime-obsessed foodies realized there wasn't a single place where they could eat ramen like Naruto, drink boba like their favorite isekai protagonist, and buy kawaii merch without having to explain their life choices.</p>
+            
+            <div class="fun-fact animate__animated animate__pulse animate__infinite animate__slower">
+                <strong>Fun Fact:</strong> Our head chef once tried to make "Perfect Cell" sushi rolls so perfect they'd evolve into Super Saiyan 2. They didn't, but they were still delicious!
+            </div>
+            
+            <h2 class="animate__animated animate__fadeInRight">Why We're Different</h2>
+            <p>We're not just a restaurant - we're an otaku paradise where:</p>
+            <ul>
+                <li>The ramen comes with complimentary anime references</li>
+                <li>Our bento boxes are almost too cute to eat (almost!)</li>
+                <li>You can debate whether Subaru or Kirito has worse plot armor while enjoying dessert</li>
+                <li>Our merch won't make your wallet scream "YAMEROOOO!"</li>
+            </ul>
+            
+            <h2 class="animate__animated animate__fadeInLeft">Meet Our "Nakama"</h2>
+            <div class="team-section">
+                <div class="team-member animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                    <img src="https://i.pinimg.com/736x/16/06/8c/16068c7173be174d79a913efd4af27a5.jpg" alt="Chef Naruto" class="animate__animated animate__pulse animate__infinite animate__slower">
+                    <h3>Chef Naruto</h3>
+                    <p>"Believe it! Our ramen will make you shout 'DATTEBAYO!' of happiness."</p>
+                </div>
+                
+                <div class="team-member animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                    <img src="https://i.pinimg.com/736x/41/63/ca/4163ca483400246cd7a6d4a4ab7f3926.jpg" alt="Manager Luffy">
+                    <h3>Manager Luffy</h3>
+                    <p>"I'm gonna be the King of the Restaurant! ...Wait, that doesn't sound right."</p>
+                </div>
+                
+                <div class="team-member animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
+                    <img src="https://i.pinimg.com/736x/1e/eb/b1/1eebb11ab9b44ef91538f31ecf95aef3.jpg" alt="Pastry Chef Usagi">
+                    <h3>Pastry Chef Usagi</h3>
+                    <p>"In the name of the moon, I'll punish your sweet tooth!"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="animate__animated animate__fadeIn">
+        <p>Open daily from 10AM to 10PM - because even anime protagonists need to sleep (sometimes)</p>
+        <p>© 2023 SenpaiSpot - Not actually affiliated with any anime (but we wish we were)</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

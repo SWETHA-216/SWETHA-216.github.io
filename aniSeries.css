@@ -1,0 +1,130 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+  }
+  
+  .categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 90px 40px;
+  }
+  
+  .categories h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  
+  .categories .covers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 20px;
+  }
+  
+  .cover-container {
+    height: 500px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cover-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  }
+  
+  .cover-item {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .cover-grad {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+  }
+  
+  .cover-text {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    z-index: 2;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    max-width: 80%;
+  }
+  
+  .cover-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Background images for each cover */
+  .cover-1 { background-image: url("https://i.pinimg.com/736x/3f/6e/51/3f6e51d72dd0f31cb534dad4db7e3904.jpg"); }
+  .cover-2 { background-image: url("https://i.pinimg.com/736x/b4/f6/10/b4f6100bfe3ae2073a068d411592c5a1.jpg"); }
+  .cover-3 { background-image: url("https://i.pinimg.com/736x/49/99/6c/49996c45a684a90dd3da92c10ef2a253.jpg"); }
+  .cover-4 { background-image: url("https://i.pinimg.com/736x/60/05/17/6005173da696ae981e10126744f1e88e.jpg"); }
+  .cover-5 { background-image: url("https://i.pinimg.com/736x/06/18/18/06181855cde0844504d2e5598410d696.jpg"); }
+  .cover-6 { background-image: url("https://i.pinimg.com/736x/4b/ea/e5/4beae5d20657dca3eb6a38cb6f4b6767.jpg"); }
+  .cover-7 { background-image: url("https://i.pinimg.com/736x/df/d4/d2/dfd4d2f6fecbcef830cbac20beb913e8.jpg"); }
+  .cover-8 { background-image: url("https://i.pinimg.com/736x/52/7f/06/527f06aca25cfe1ff6100ff2990a1272.jpg"); }
+  .cover-9 { background-image: url("https://i.pinimg.com/736x/11/4c/30/114c30d5d0e0a4fe9edce139b22b2bbe.jpg"); }
+  .cover-10 { background-image: url("https://i.pinimg.com/736x/5d/b6/f3/5db6f388b0fb3a8d78baf1b365555c07.jpg"); }
+  .cover-11 { background-image: url("https://i.pinimg.com/474x/54/4f/47/544f47c15728f34e767a385c16ccf8df.jpg"); }
+  .cover-12 { background-image: url("https://i.pinimg.com/736x/83/5c/d4/835cd4892e3741678f0fb99c0bdee8f5.jpg"); }
+  .cover-13 { background-image: url("https://i.pinimg.com/736x/5c/54/b7/5c54b7b0e74645d19d244ff6a074bd16.jpg"); }
+  .cover-14 { background-image: url("https://i.pinimg.com/736x/74/0c/20/740c20a104f8f0c983852e8829582f92.jpg"); }
+  .cover-15 { background-image: url("https://i.pinimg.com/736x/33/3c/b7/333cb7bc2b575f913d302dba57bd97fa.jpg"); }
+  .cover-16 { background-image: url("https://i.pinimg.com/736x/09/4d/f6/094df60c7be44f43decfadec2bb5eed0.jpg"); }
+  .cover-17 { background-image: url("https://i.pinimg.com/736x/d4/29/50/d4295053babb4dda1b77367df5114e61.jpg"); }
+  .cover-18 { background-image: url("https://i.pinimg.com/736x/52/7f/06/527f06aca25cfe1ff6100ff2990a1272.jpg"); }
+  .cover-19 { background-image: url("https://i.pinimg.com/736x/af/89/ed/af89edd9a59760b6cf36830df08b9c12.jpg"); }
+  .cover-20 { background-image: url("https://i.pinimg.com/736x/72/78/2b/72782b4ae8728de96e3890e71bc94b27.jpg"); }
+  .cover-21 { background-image: url("https://i.pinimg.com/736x/90/2f/94/902f9464a15190b637e6041b7f95ad90.jpg"); }
+  .cover-22 { background-image: url("https://i.pinimg.com/736x/15/72/47/1572471b42f5572beab42ab10401f046.jpg"); }
+  .cover-23 { background-image: url("https://i.pinimg.com/736x/46/9f/77/469f77f2bcccda40183bbc31b5490f11.jpg"); }
+  .cover-24 { background-image: url("https://i.pinimg.com/736x/f9/9a/e0/f99ae0a414f3994810e436d2fdc2883c.jpg"); }
+  
+  @media (max-width: 768px) {
+    .categories {
+      padding: 40px 20px;
+    }
+    
+    .categories h1 {
+      font-size: 2rem;
+    }
+    
+    .cover-container {
+      height: 350px;
+    }
+    
+    .cover-text {
+      font-size: 1.1rem;
+      bottom: 15px;
+      left: 15px;
+    }
+  }
